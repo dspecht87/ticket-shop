@@ -1,0 +1,7 @@
+{
+  "translation": {
+    "ticketsFor": "Tickets für {{name}}",
+    "view": "Ansicht",
+    "ticketPrice": "Tickets ab {{price}}€"
+  }
+}
