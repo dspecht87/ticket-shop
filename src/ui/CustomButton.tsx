@@ -1,7 +1,11 @@
 import { styled } from "@mui/material/styles";
 import Button, { ButtonProps } from "@mui/material/Button";
 
-const CutomButton = styled(Button)<ButtonProps>(() => ({
+interface CustomButtonProps extends ButtonProps {
+  height?: number | string;
+}
+
+const CutomButton = styled(Button)<CustomButtonProps>(({ height }) => ({
   border: 1,
   borderColor: "#000",
   color: "#FFF",
@@ -16,7 +20,7 @@ const CutomButton = styled(Button)<ButtonProps>(() => ({
   textTransform: "none",
   fontSize: 18,
   borderRadius: "8px",
-  height: "55px",
+  height: height ?? "55px",
   "& .MuiButton-endIcon": {
     marginLeft: "41px",
   },

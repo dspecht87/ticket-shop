@@ -2,6 +2,10 @@
   "translation": {
     "ticketsFor": "Tickets für {{name}}",
     "view": "Ansicht",
-    "ticketPrice": "Tickets ab {{price}}€"
+    "ticketPrice": "Tickets ab {{price}}€",
+    "ticketPriceFirstLine": "Tickets ab",
+    "ticketPriceSecLine": "{{price}} Euro",
+    "at": "Am",
+    "starting": "ab"
   }
 }

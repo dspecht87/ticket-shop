@@ -7,6 +7,7 @@ import EventGrid from "@/EventList/EventGrid/EventGrid";
 
 import SearchField from "@/ui/SearchField";
 import useEvents from "@/hooks/useEvents";
+import EventList from "@/EventList/EventList/EventList";
 
 enum ViewModes {
   grid = "GRID",
@@ -95,6 +96,7 @@ function EventListing() {
         </Box>
       </Box>
       {viewMode === ViewModes.grid && <EventGrid data={events} />}
+      {viewMode === ViewModes.list && <EventList data={events} />}
     </Box>
   );
 }
