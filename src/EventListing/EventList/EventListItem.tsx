@@ -52,7 +52,9 @@ function EventListItem({ event, bg2 }: { event: any; bg2: boolean }) {
             {i18next.t("at")} {getDateString(new Date(event.startDate))}
           </Typography>
           <Typography sx={{ textAlign: "left" }} variant="body1">
-            {i18next.t("starting")} {getTimeString(new Date(event.startDate))}
+            {i18next.t("starting", {
+              time: getTimeString(new Date(event.startDate)),
+            })}
           </Typography>
         </Box>
       </Grid>
@@ -61,6 +63,7 @@ function EventListItem({ event, bg2 }: { event: any; bg2: boolean }) {
           sx={{
             display: "flex",
             flexDirection: "column",
+            alignContent: "end",
           }}
         >
           <Typography sx={{ textAlign: "left" }} variant="body1">

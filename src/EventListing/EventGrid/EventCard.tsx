@@ -96,7 +96,10 @@ function EventCard({ event }: { event: any }) {
               endIcon={
                 <span
                   className="material-symbols-rounded"
-                  style={{ fontSize: "32px", marginTop: "-3px" }}
+                  style={{
+                    fontSize: "32px",
+                    marginTop: "-3px",
+                  }}
                 >
                   chevron_right
                 </span>

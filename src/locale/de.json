@@ -6,6 +6,6 @@
     "ticketPriceFirstLine": "Tickets ab",
     "ticketPriceSecLine": "{{price}} Euro",
     "at": "Am",
-    "starting": "ab"
+    "starting": "ab {{time}} Uhr"
   }
 }

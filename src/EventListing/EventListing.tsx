@@ -18,7 +18,7 @@ enum ViewModes {
 function EventListing() {
   const [viewMode, setViewMode] = useState(ViewModes.grid);
 
-  const { events, searchterm, setSearchTerm } = useEvents();
+  const { events, searchTerm: searchterm, setSearchTerm } = useEvents();
 
   return (
     <Box
@@ -95,8 +95,10 @@ function EventListing() {
           </Box>
         </Box>
       </Box>
-      {viewMode === ViewModes.grid && <EventGrid data={events} />}
-      {viewMode === ViewModes.list && <EventList data={events} />}
+      <div style={{ marginTop: "32px" }}>
+        {viewMode === ViewModes.grid && <EventGrid data={events} />}
+        {viewMode === ViewModes.list && <EventList data={events} />}
+      </div>
     </Box>
   );
 }

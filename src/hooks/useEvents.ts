@@ -2,18 +2,22 @@
 import { Dispatch, SetStateAction } from "react";
 import dummyData from "./dummyData.json";
 import { useState } from "react";
+import { deepStringMatch } from "@/util/util";
 
 function useEvents(): {
   events: any[];
-  searchterm: string;
+  searchTerm: string;
   setSearchTerm: Dispatch<SetStateAction<string>>;
 } {
-  const [searchterm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
 
   // data fetching comes here
-  const events = dummyData;
+  const allEvents = dummyData;
+  const events = allEvents
+    .filter((item) => deepStringMatch(item, searchTerm))
+    .slice(0, 8);
 
-  return { events, searchterm, setSearchTerm };
+  return { events, searchTerm: searchTerm, setSearchTerm };
 }
 
 export default useEvents;

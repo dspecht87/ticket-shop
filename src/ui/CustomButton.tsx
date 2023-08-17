@@ -15,7 +15,7 @@ const CutomButton = styled(Button)<CustomButtonProps>(({ height }) => ({
     backgroundColor: "#FFF",
     color: "#000",
   },
-  fontWeight: "normal",
+  fontWeight: "lighter",
   fontFamily: "DM Sans",
   textTransform: "none",
   fontSize: 18,
