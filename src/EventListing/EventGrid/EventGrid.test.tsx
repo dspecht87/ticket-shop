@@ -3,13 +3,6 @@ import EventGrid from "./EventGrid";
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
-// Mock the EventCard component
-// jest.mock("@/EventListing/EventGrid/EventCard", () => {
-//   return function MockEventCard(props: any) {
-//     return <div data-testid="mock-event-card">{props.event.title}</div>;
-//   };
-// });
-
 describe("EventGrid", () => {
   it("renders events correctly", () => {
     const eventData = [{ title: "Event 1" }, { title: "Event 2" }];

@@ -20,6 +20,7 @@
       "jest",
       "@testing-library/jest-dom"
     ],
+    "esModuleInterop": true,
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,

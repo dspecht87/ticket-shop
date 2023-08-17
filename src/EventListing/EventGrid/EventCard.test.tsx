@@ -12,11 +12,7 @@ describe("EventCard", () => {
   };
 
   it("renders event details correctly", () => {
-    const { getByText, getByAltText, debug } = render(
-      <EventCard event={mockEvent} />
-    );
-
-    debug();
+    const { getByText, getByAltText } = render(<EventCard event={mockEvent} />);
 
     const titleElement = getByText(mockEvent.title);
     expect(titleElement).toBeInTheDocument();
