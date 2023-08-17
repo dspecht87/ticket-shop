@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import EventCard from "@/EventList/EventGrid/EventCard";
+import EventCard from "@/EventListing/EventGrid/EventCard";
 import Box from "@mui/material/Box";
 
 function EventGrid({ data }: { data: any }) {

@@ -16,7 +16,7 @@ const optionsTime: Intl.DateTimeFormatOptions = {
   minute: "2-digit", // 2-digit minute
   hour12: false, // Use 24-hour format
 };
-export const getDateTime = (date: Date) => {
+export const getTimeString = (date: Date) => {
   const timeFormatter: Intl.DateTimeFormat = new Intl.DateTimeFormat(
     "de-DE",
     optionsTime

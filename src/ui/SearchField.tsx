@@ -16,8 +16,8 @@ const StyledTextField = styled(TextField)({
 });
 
 interface Props {
-  center: boolean;
-  id: string;
+  center?: boolean;
+  id?: string;
   value?: string;
   onChange?: Function;
 }

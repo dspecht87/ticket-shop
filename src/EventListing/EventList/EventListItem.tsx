@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { getDateString, getDateTime } from "@/EventList/EventGrid/util.js";
+import { getDateString, getTimeString } from "@/util/util.js";
 import Grid from "@mui/material/Grid";
 import IconLabel from "@/ui/IconLabel";
 import { Typography } from "@mui/material";
@@ -52,7 +52,7 @@ function EventListItem({ event, bg2 }: { event: any; bg2: boolean }) {
             {i18next.t("at")} {getDateString(new Date(event.startDate))}
           </Typography>
           <Typography sx={{ textAlign: "left" }} variant="body1">
-            {i18next.t("starting")} {getDateTime(new Date(event.startDate))}
+            {i18next.t("starting")} {getTimeString(new Date(event.startDate))}
           </Typography>
         </Box>
       </Grid>

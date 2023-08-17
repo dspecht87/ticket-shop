@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import EventListItem from "@/EventList/EventList/EventListItem";
+import EventListItem from "@/EventListing/EventList/EventListItem";
 import Box from "@mui/material/Box";
 
 function EventList({ data }: { data: any }) {

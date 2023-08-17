@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { getDateString, getDateTime } from "@/EventList/EventGrid/util.js";
+import { getDateString, getTimeString } from "@/util/util";
 import Grid from "@mui/material/Grid";
 import IconLabel from "@/ui/IconLabel";
 import { Typography } from "@mui/material";
@@ -9,7 +9,12 @@ import CutomButton from "@/ui/CustomButton";
 
 function EventCard({ event }: { event: any }) {
   return (
-    <Grid container columnSpacing={6} justifyItems="center">
+    <Grid
+      container
+      columnSpacing={6}
+      justifyItems="center"
+      data-testid="event-card"
+    >
       <Grid item xs={12} lg={4}>
         <div style={{ margin: "auto" }} className="event-image-container">
           <img src={event.imageUrl} alt={event.title} />
@@ -44,14 +49,18 @@ function EventCard({ event }: { event: any }) {
                 flexWrap: "wrap",
               }}
             >
-              <IconLabel
-                iconIdentifier="calendar_month"
-                label={getDateString(new Date(event.startDate))}
-              />
-              <IconLabel
-                iconIdentifier="schedule"
-                label={getDateTime(new Date(event.startDate))}
-              />
+              {event.startDate && (
+                <>
+                  <IconLabel
+                    iconIdentifier="calendar_month"
+                    label={getDateString(new Date(event.startDate))}
+                  />
+                  <IconLabel
+                    iconIdentifier="schedule"
+                    label={getTimeString(new Date(event.startDate))}
+                  />
+                </>
+              )}
             </Box>
             <IconLabel
               iconIdentifier="location_on"
@@ -62,7 +71,7 @@ function EventCard({ event }: { event: any }) {
               <IconLabel
                 iconIdentifier="confirmation_number"
                 label={i18next.t("ticketPrice", {
-                  price: event.priceFrom.toFixed(2),
+                  price: event.priceFrom?.toFixed(2),
                 })}
               />
             )}

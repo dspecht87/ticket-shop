@@ -1,4 +1,4 @@
-import EventListing from "@/EventList/EventListing";
+import EventListing from "@/EventListing/EventListing";
 import "./App.css";
 import Header from "@/Header";
 import { ThemeProvider } from "@mui/material/styles";

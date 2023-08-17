@@ -3,11 +3,11 @@ import Box from "@mui/material/Box";
 import i18next from "i18next";
 import { useState } from "react";
 import SquareIconButton from "@/ui/SquareIconButton";
-import EventGrid from "@/EventList/EventGrid/EventGrid";
+import EventGrid from "@/EventListing/EventGrid/EventGrid";
 
 import SearchField from "@/ui/SearchField";
 import useEvents from "@/hooks/useEvents";
-import EventList from "@/EventList/EventList/EventList";
+import EventList from "@/EventListing/EventList/EventList";
 
 enum ViewModes {
   grid = "GRID",
